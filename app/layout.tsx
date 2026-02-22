@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased text-black transition-colors duration-500 font-light`}>
+      <body className={`${inter.variable} font-sans antialiased text-white transition-colors duration-500 font-light`}>
         <CustomCursor />
 
         {/* Left Sidebar Fixed Icons */}
