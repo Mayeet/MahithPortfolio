@@ -1,35 +1,48 @@
 "use client";
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import { MapPin } from "lucide-react";
 
 const experiences = [
     {
+        title: "Incoming Summer 2026 Supply Chain Intern",
+        company: "Flextronics",
+        location: "Austin, Texas",
+        date: "May 2026 \u2014 Aug 2026",
+        description: ""
+    },
+    {
         title: "Data Analyst Intern",
         company: "Flexera Global Inc.",
+        location: "Sugar Land, Texas",
         date: "June 2025 \u2014 Aug 2025",
         description: "Wrote and optimized SQL scripts to extract performance logs, addressing latency issues during nightly ETL processes for energy and oil & gas clients. Designed a Power BI dashboard monitoring virtual agent performance, revealing over 50% of queries resolved automatically."
     },
     {
         title: "Extern",
         company: "Beats by Dre",
+        location: "Remote",
         date: "April 2025 \u2014 June 2025",
         description: "Conducted qualitative and quantitative research on Gen Z preferences by analyzing over 100 consumer reviews. Leveraged Python, NLP, and Gemini AI for sentiment analysis, visualizing feedback across 3 competitor leading audio brands."
     },
     {
         title: "Business Analyst Intern",
         company: "E3 Global",
+        location: "Katy, Texas",
         date: "June 2024 \u2014 July 2024",
         description: "Developed a feedback-driven evaluation system boosting satisfaction ratings by 20%. Organized 200+ survey data points into client feedback spreadsheets to yield insights for improved consulting follow-up strategies, while managing project resources via SAP IBP."
     },
     {
         title: "Business Development Intern",
         company: "Zentech Incorporated",
+        location: "Houston, Texas",
         date: "Jan 2024 \u2014 May 2024",
         description: "Analyzed 100,000+ data entries in Microsoft Excel to uncover client relationship trends, driving strategic recommendations for 2 major partnership decisions that improved business targeting. Boosted LinkedIn client engagement by 8% using AI-driven research methods."
     },
     {
         title: "FRI Research Assistant",
         company: "UT Austin College of Natural Sciences",
+        location: "Austin, Texas",
         date: "June 2023 \u2014 Aug 2023",
         description: "Led a team of 5 researchers to create 3 data-driven environmental models. Identified statistical trends in water quality, demonstrating the impacts of anthropogenic activity on urban ecosystems across Waller Creek sampling zones."
     }
@@ -77,7 +90,13 @@ export default function WorkTimeline() {
                             <span className="text-sm text-white font-light mt-1 md:mt-0">{exp.date}</span>
                         </div>
 
-                        <h4 className="text-base text-white mb-4">{exp.company}</h4>
+                        <div className="flex items-center gap-3 mb-4">
+                            <h4 className="text-base text-white">{exp.company}</h4>
+                            <span className="text-neutral-500 text-sm font-light flex items-center gap-1">
+                                <MapPin size={14} />
+                                {exp.location}
+                            </span>
+                        </div>
                         <p className="text-neutral-500 font-light leading-relaxed text-sm md:text-base max-w-2xl">
                             {exp.description}
                         </p>

@@ -46,7 +46,7 @@ export default function LifeGrid() {
                     </div>
                     <div>
                         <h3 className="text-xl font-bold mb-1">Boy Scouts</h3>
-                        <p className="text-[#FFFF00]/70 text-sm">Life Scout & Senior Patrol Leader. Led 200+ scouts and a 7-day sailing/scuba expedition.</p>
+                        <p className="text-[#FFFF00]/70 text-sm">Eagle Scout & Senior Patrol Leader. Led 200+ scouts and a 7-day sailing/scuba expedition.</p>
                     </div>
                 </motion.div>
 

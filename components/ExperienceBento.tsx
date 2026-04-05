@@ -32,6 +32,22 @@ export default function ExperienceBento() {
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Experience & Education</h2>
                 </div>
 
+                {/* Flextronics Card */}
+                <motion.div variants={item} className="md:col-span-2 row-span-1 rounded-3xl bg-[#111] border border-white/5 p-8 flex flex-col justify-between group hover:border-white/20 transition-colors">
+                    <div className="flex justify-between items-start">
+                        <div className="p-3 bg-white/5 rounded-2xl w-fit group-hover:bg-white/10 transition-colors">
+                            <Briefcase className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-sm font-medium text-neutral-500">May 2026 - Aug 2026</span>
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-bold flex items-center gap-3">
+                            Flextronics
+                            <span className="text-xs px-2 py-1 bg-white/10 rounded-full font-medium text-white/70 tracking-wider uppercase backdrop-blur-sm">Incoming Summer 2026 Supply Chain Intern</span>
+                        </h3>
+                    </div>
+                </motion.div>
+
                 {/* Flexera Global Card */}
                 <motion.div variants={item} className="md:col-span-2 row-span-1 rounded-3xl bg-[#111] border border-white/5 p-8 flex flex-col justify-between group hover:border-white/20 transition-colors">
                     <div className="flex justify-between items-start">
@@ -41,7 +57,7 @@ export default function ExperienceBento() {
                         <span className="text-sm font-medium text-neutral-500">June 2025 - Aug 2025</span>
                     </div>
                     <div>
-                        <h3 className="text-2xl font-bold mb-2 flex items-center gap-3">
+                        <h3 className="text-2xl font-bold mb-2 flex flex-wrap items-center gap-3">
                             Flexera Global Inc.
                             <span className="text-xs px-2 py-1 bg-white/10 rounded-full font-medium text-white/70 tracking-wider uppercase backdrop-blur-sm">Data Analyst Intern</span>
                         </h3>
@@ -50,7 +66,7 @@ export default function ExperienceBento() {
                 </motion.div>
 
                 {/* Texas A&M Card */}
-                <motion.div variants={item} className="md:col-span-1 row-span-2 rounded-3xl bg-[#1A1A1A] border border-white/5 p-8 flex flex-col justify-between group hover:border-[#500000]/30 transition-colors relative overflow-hidden">
+                <motion.div variants={item} className="md:col-span-1 row-span-3 rounded-3xl bg-[#1A1A1A] border border-white/5 p-8 flex flex-col justify-between group hover:border-[#500000]/30 transition-colors relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-b from-[#500000]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="flex justify-between items-start relative z-10">
                         <div className="p-3 bg-[#500000]/20 rounded-2xl w-fit">

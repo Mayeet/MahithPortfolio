@@ -120,7 +120,7 @@ export default function AcademicGrid() {
                         {[
                             { title: "Perplexity Campus Partner", desc: "Brand Ambassador", sub: "Increased Comet browser signups by supporting affiliate campaigns and launching 2 new campus-wide events." },
                             { title: "Texas A&M Cybersecurity Club", desc: "Activity Manager", sub: "Collaborated on outreach, streamlining meetings and driving enrollment." },
-                            { title: "Boy Scouts of America", desc: "Senior Patrol Leader & Life Scout", sub: "Managed 200+ scouts, led 7-day sea expedition, and launched fundraisers." },
+                            { title: "Boy Scouts of America", desc: "Senior Patrol Leader & Eagle Scout", sub: "Managed 200+ scouts, led 7-day sea expedition, and launched fundraisers." },
                             { title: "My Home Group - Avatar", desc: "Basketball Coach", sub: "Instructing youth athletes in fundamentals and personalized wellness programs." }
                         ].map((item, i) => (
                             <motion.div key={i} variants={itemVariants} className="p-6 border border-white/10 bg-white/5 hover:bg-white/10 hover:border-[#6A0DAD]/50 transition-all duration-300 cursor-default rounded-sm">
