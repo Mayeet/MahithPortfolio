@@ -60,7 +60,7 @@ export default function Hero() {
                 </h1>
 
                 <motion.p variants={item} className="text-lg text-white max-w-sm mb-12 font-light">
-                    Supply Chain Management at Texas A&amp;M University
+                    Supply Chain Management &amp; Business Honors at Texas A&amp;M University
                 </motion.p>
 
                 <motion.div variants={item}>
