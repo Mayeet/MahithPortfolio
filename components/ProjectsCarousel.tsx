@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Github } from "lucide-react";
+import { ChevronLeft, ChevronRight, Github, ExternalLink } from "lucide-react";
 
 const projects = [
     {
@@ -11,7 +11,20 @@ const projects = [
         technologies: "Flutter, Node.js, ReactJS, UI/UX Design, Generative AI",
         image: "/revv_logo_new.png",
         link: "https://www.joinrevv.com/",
+        linkText: "Visit Revv",
+        github: "",
         repo: "joinrevv"
+    },
+    {
+        title: "NutrientOptimizer",
+        subtitle: "Web Application • 2026",
+        description: "This is a food and diet optimization application which uses concepts such as linear programming and data optimization to achieve nutritional needs while aiming for the lowest cost.",
+        technologies: "Antigravity, Gemini, Node.js, Next.js, TypeScript, Tailwind CSS, Vercel",
+        image: "/nutrient_optimizer_logo.png",
+        link: "https://mayeet-nutrient-optimizer.vercel.app/nutrient",
+        linkText: "Visit Website",
+        github: "https://github.com/Mayeet/NutrientOptimizer",
+        repo: "NutrientOptimizer"
     }
 ];
 
@@ -54,7 +67,7 @@ export default function ProjectsCarousel() {
                             className="flex flex-col md:flex-row w-full gap-12 md:gap-16 items-center px-8 md:px-0"
                         >
                             {/* Graphic Side */}
-                            <div className="w-full md:w-1/2 aspect-square flex items-center justify-center bg-[#1e448b] relative max-h-[500px]">
+                            <div className="w-full md:w-1/2 aspect-square flex items-center justify-center bg-black relative max-h-[500px]">
                                 {projects[currentIndex].title === "EcoGrid" ? (
                                     /* Placeholder for EcoGrid styling based on screenshot */
                                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none p-8">
@@ -62,12 +75,12 @@ export default function ProjectsCarousel() {
                                         <div className="absolute text-white/50 font-light text-2xl tracking-widest">ECOGRID IMAGE</div>
                                     </div>
                                 ) : (
-                                    <div className="w-full h-full bg-black flex items-center justify-start">
+                                    <div className={`w-full h-full bg-black flex items-center ${projects[currentIndex].title === "NutrientOptimizer" ? "justify-center p-8 md:p-12" : "justify-start"}`}>
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
                                             src={projects[currentIndex].image}
                                             alt={projects[currentIndex].title}
-                                            className="w-[85%] md:w-[75%] h-auto object-contain [clip-path:inset(1.5%_0_0_0)]"
+                                            className={projects[currentIndex].title === "NutrientOptimizer" ? "w-full h-auto object-contain scale-110" : "w-[85%] md:w-[75%] h-auto object-contain [clip-path:inset(1.5%_0_0_0)]"}
                                         />
                                     </div>
                                 )}
@@ -87,10 +100,20 @@ export default function ProjectsCarousel() {
                                     <span className="text-sm md:text-base text-white font-light">{projects[currentIndex].technologies}</span>
                                 </div>
 
-                                <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-white/20 bg-white/5 text-white text-sm font-light hover:bg-white/10 transition-colors flex items-center justify-center gap-3 w-fit rounded-sm">
-                                    <Github size={16} />
-                                    <span>{projects[currentIndex].repo}</span>
-                                </a>
+                                <div className="flex items-center gap-4">
+                                    {projects[currentIndex].link && (
+                                        <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-white/20 bg-white/5 text-white text-sm font-light hover:bg-white/10 transition-colors flex items-center justify-center gap-3 w-fit rounded-sm">
+                                            <ExternalLink size={16} />
+                                            <span>{projects[currentIndex].linkText || "Website"}</span>
+                                        </a>
+                                    )}
+                                    {projects[currentIndex].github && (
+                                        <a href={projects[currentIndex].github} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-white/20 bg-white/5 text-white text-sm font-light hover:bg-white/10 transition-colors flex items-center justify-center gap-3 w-fit rounded-sm">
+                                            <Github size={16} />
+                                            <span>{projects[currentIndex].repo}</span>
+                                        </a>
+                                    )}
+                                </div>
                             </div>
                         </motion.div>
                     </AnimatePresence>
